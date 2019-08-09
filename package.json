@@ -1,0 +1,22 @@
+{
+  "name": "irsuti-cv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel -p 3000 watch src/index.html",
+    "build": "parcel build -d build src/index.html"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  },
+  "browserslist": [
+    "> 5%"
+  ]
+}
