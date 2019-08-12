@@ -1,5 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import {
+  LitElement, html, css, customElement,
+} from 'lit-element';
 
+@customElement('experience-wc')
 class Experience extends LitElement {
   static get properties() {
     return {
@@ -71,4 +74,4 @@ class Experience extends LitElement {
   }
 }
 
-window.customElements.define('experience-wc', Experience);
+export default Experience;
