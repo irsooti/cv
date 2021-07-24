@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import Layout from '@/components/Layout/Layout';
 import Main from '@/components/Layout/Main';
 import Navbar from '@/components/Navbar';
-import { getDocs } from '@/lib/doc';
+import { getDocs, sortExperienceDocsByDate } from '@/lib/doc';
 import { ExperienceModel } from '@/shared/types';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
@@ -26,6 +26,9 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Main>
           <Hero />
           <Experiences experiences={contents.map((m) => m.meta)} />
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <small>{t('footer.printerFriendly')}</small>
+          </div>
         </Main>
       </Layout>
     </>
@@ -36,7 +39,7 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   const contents = await getDocs<ExperienceModel>('docs/experiences');
 
   return {
-    props: { contents }, // will be passed to the page component as props
+    props: { contents: sortExperienceDocsByDate(contents) }, // will be passed to the page component as props
   };
 };
 
