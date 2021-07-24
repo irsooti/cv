@@ -1,0 +1,18 @@
+{
+  "experiences": {
+    "title": "Esperienze"
+  },
+  "title": "Curriculum di Daniele Irsuti",
+  "navbar": {
+    "link": {
+      "portfolio": "Blog",
+      "github": "Github",
+      "email": "Email",
+      "linkedin": "Linkedin"
+    }
+  },
+  "hero": {
+    "title": "👋  sono Daniele Irsuti",
+    "impressum": "Sono uno sviluppatore frontend, mi interesso di tecnologie web, UI e processi di UX"
+  }
+}

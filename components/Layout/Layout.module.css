@@ -1,0 +1,19 @@
+@media (width > 800px) {
+  .box {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .main {
+    width: 100%;
+  }
+}
+
+@media print {
+  .box {
+    display: block;
+  }
+}

@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "@next/mdx": "^11.0.1",
+    "@svgr/webpack": "^5.5.0",
+    "gray-matter": "^4.0.3",
+    "i18next": "^20.3.4",
     "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-i18next": "^11.11.3"
   },
   "devDependencies": {
     "@types/react": "17.0.14",

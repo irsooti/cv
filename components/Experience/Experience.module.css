@@ -1,0 +1,32 @@
+.box {
+  border-bottom: solid 1px #000;
+}
+
+.box header {
+  display: flex;
+  margin-top: 5px;
+  flex: 1 100%;
+  align-items: center;
+}
+
+.time {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.company {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.role {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0;
+  color: grey;
+  margin-bottom: -10px;
+}

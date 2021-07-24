@@ -1,0 +1,38 @@
+.box {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #3d5bb3;
+  padding-bottom: 8px;
+  border-bottom: solid 3px #3d5bb3;
+  letter-spacing: 2px;
+}
+
+.list {
+  margin-top: 10px;
+}
+
+@media (width > 800px) {
+  .box {
+    padding: 0;
+  }
+
+  .title {
+    border-bottom: solid 13px #3d5bb3;
+  }
+}
+
+@media print {
+  .title {
+    color: #2B2B2B;
+    border-bottom: solid 3px #2B2B2B;
+  }
+}

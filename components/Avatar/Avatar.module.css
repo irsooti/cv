@@ -1,0 +1,21 @@
+.image {
+  /* width: 50px; */
+  border-radius: 50%;
+}
+
+.box {
+  border: solid 3px rgba(0, 0, 0, 0.295);
+  border-radius: 50%;
+}
+
+@media (width > 800px) {
+  .image {
+    width: 100%;
+    margin: 0 13px;
+    border: solid inset 13px;
+  }
+  .box {
+    border: solid 13px rgba(0, 0, 0, 0.295);
+  }
+}
+

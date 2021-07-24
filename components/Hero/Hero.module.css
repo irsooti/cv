@@ -1,0 +1,34 @@
+.box {
+  border-left: none;
+  padding: 2em 3em 2em 3em;
+  font-family: 'Montserrat';
+}
+
+.title {
+  font-size: 2.3em;
+}
+
+.impressum {
+  color: #9c9c9c;
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+@media (width > 800px) {
+  .box {
+    border-left: solid 13px #ccc;
+  }
+}
+
+@media print {
+  .title {
+    display: none;
+    border-left: none;
+  }
+
+  .box {
+    border-left: none;
+    padding: 2em 15px 1em 15px;
+    font-family: inherit;
+  }
+}
