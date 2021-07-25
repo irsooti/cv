@@ -23,12 +23,18 @@
 @media print {
   .title {
     display: none;
+    font-size: 10pt;
     border-left: none;
+  }
+
+  .impressum {
+    font-size: 10pt;
   }
 
   .box {
     border-left: none;
-    padding: 2em 15px 1em 15px;
+    padding: 0;
+    padding-left: 15px;
     font-family: inherit;
   }
 }

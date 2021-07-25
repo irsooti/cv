@@ -31,6 +31,9 @@
 }
 
 @media print {
+  .box {
+    padding: 15px;
+  }
   .title {
     color: #2B2B2B;
     border-bottom: solid 3px #2B2B2B;

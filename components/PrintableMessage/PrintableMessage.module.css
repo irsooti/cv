@@ -1,6 +1,7 @@
 .box {
   text-align: center;
   margin-bottom: 130px;
+  color: #9c9c9c;
 }
 
 @media print {
