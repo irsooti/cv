@@ -1,0 +1,10 @@
+.box {
+  text-align: center;
+  margin-bottom: 130px;
+}
+
+@media print {
+  .box {
+    display: none;
+  }
+}

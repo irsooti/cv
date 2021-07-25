@@ -39,10 +39,11 @@
 .externalLink {
   list-style: none;
   margin-right: 35px;
+  display: inline-table;
 }
 
 .externalLink a {
-  display: flex;
+  /* display: flex; */
   position: relative;
 }
 
@@ -93,7 +94,7 @@
   background: #fff;
   right: 0;
   position: fixed;
-  background: linear-gradient(to left, white, #ffc0cb00);
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
 }
 
 @media (width > 800px) {
@@ -148,6 +149,10 @@
     display: inline;
   }
 
+  .externalLink a:before {
+    display: none;
+  }
+
   .links {
     margin-left: 30px;
     scroll-snap-type: x mandatory;
@@ -195,12 +200,16 @@
   .links {
     display: none;
   }
-  
+
+  .externalLink a:before {
+    display: none;
+  }
+
   .middle {
     text-align: center;
     font-size: 1.4em;
     background: #fff;
-    color: #2B2B2B;
+    color: #2b2b2b;
   }
 
   .middle h1 {

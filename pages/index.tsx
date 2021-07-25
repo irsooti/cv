@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Layout from '@/components/Layout/Layout';
 import Main from '@/components/Layout/Main';
 import Navbar from '@/components/Navbar';
+import PrintableMessage from '@/components/PrintableMessage';
 import { getDocs, sortExperienceDocsByDate } from '@/lib/doc';
 import { ExperienceModel } from '@/shared/types';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
@@ -13,6 +14,8 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   contents,
 }) => {
   const { t } = useTranslation();
+  const experiences = contents.map((m) => m.meta);
+
   return (
     <>
       <Head>
@@ -25,10 +28,8 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Navbar />
         <Main>
           <Hero />
-          <Experiences experiences={contents.map((m) => m.meta)} />
-          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-            <small>{t('footer.printerFriendly')}</small>
-          </div>
+          <Experiences experiences={experiences} />
+          <PrintableMessage />
         </Main>
       </Layout>
     </>
