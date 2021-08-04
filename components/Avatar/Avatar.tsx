@@ -10,7 +10,7 @@ type Props = {
 export const Avatar: React.FC<Props> = ({ src, alt }) => {
   return (
     <div className={classes.box}>
-      <Image layout="responsive" className={classes.image} src={src} alt={alt} />
+      <Image layout="responsive" className={classes.image} placeholder="blur" src={src} alt={alt} />
     </div>
   );
 };
