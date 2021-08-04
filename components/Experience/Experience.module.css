@@ -30,3 +30,12 @@
   color: grey;
   margin-bottom: -10px;
 }
+
+@media (width > 800px) {
+  .header {
+    font-size: 1.8em;
+    color: #3c5bb3;
+    font-family: 'Montserrat';
+    line-height: 1.3;
+  }
+}

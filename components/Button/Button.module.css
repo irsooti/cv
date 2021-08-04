@@ -1,0 +1,50 @@
+.box {
+  color: #fff;
+  border: none;
+  background: var(--primary);
+  cursor: pointer;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  position: relative;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  mix-blend-mode: difference;
+  box-sizing: border-box;
+  border-radius: var(--round-lg);
+}
+
+.box:after {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  border-radius: var(--round-lg);
+  transform: translate(0, 0);
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background: transparent;
+}
+
+.box:hover:after {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.295);
+  width: 100%;
+}
+
+.box--md {
+  padding: 5px 15px;
+}
+
+.box--lg {
+  padding: 15px 25px;
+}
+
+.box--md {
+  padding: 5px 15px;
+}
+
+.box--xs {
+  padding: inherit;
+}

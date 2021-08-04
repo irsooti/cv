@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '../Button';
 import classes from './PrintableMessage.module.css';
 
 export const PrintableMessage = () => {
@@ -7,7 +8,8 @@ export const PrintableMessage = () => {
 
   return (
     <div className={classes.box}>
-      <small>{t('footer.printerFriendly')}</small>
+      <div className={classes.printMessage}>{t('footer.printerFriendly')}</div>
+      <Button onClick={window.print}>{t('footer.print')}</Button>
     </div>
   );
 };

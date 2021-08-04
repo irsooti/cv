@@ -9,6 +9,12 @@ import { ExperienceModel } from '@/shared/types';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import dynamic from 'next/dynamic';
+
+const PrintableMessageWithNoSSR = dynamic(
+  () => import('@/components/PrintableMessage'),
+  { ssr: false }
+);
 
 const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   contents,
@@ -29,7 +35,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Main>
           <Hero />
           <Experiences experiences={experiences} />
-          <PrintableMessage />
+          <PrintableMessageWithNoSSR />
         </Main>
       </Layout>
     </>

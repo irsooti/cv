@@ -4,6 +4,17 @@
   color: #9c9c9c;
 }
 
+.printMessage {
+  margin-bottom: 1rem;
+}
+
+/* .printMessage:before {
+  content: '•';
+  display: block;
+  margin-bottom: 2em;
+  font-size: 3em;
+} */
+
 @media print {
   .box {
     display: none;

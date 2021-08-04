@@ -20,6 +20,7 @@
     "react-i18next": "^11.11.3"
   },
   "devDependencies": {
+    "@types/mdx-js__react": "^1.5.4",
     "@types/react": "17.0.14",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",

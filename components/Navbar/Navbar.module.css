@@ -47,7 +47,8 @@
 }
 
 .externalLink a:before {
-  content: '';
+  content: ' ';
+  display: block;
   width: 0;
   position: absolute;
   bottom: -2px;
@@ -149,10 +150,6 @@
     display: inline;
   }
 
-  .externalLink a:before {
-    display: none;
-  }
-
   .links {
     margin-left: 30px;
     scroll-snap-type: x mandatory;
@@ -225,6 +222,6 @@
   }
 
   .externalLink a {
-    display: inline;
+    display: inline-block;
   }
 }

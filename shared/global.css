@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap');
 
+:root {
+  --primary: #5681fd;
+  --round-lg: 30px;
+}
+
 body {
   font-family: 'Merriweather', 'Georgia', serif;
   font-size: 13px;
@@ -14,7 +19,7 @@ a {
 }
 
 @media print {
-    body {
-        font-size: 8pt;
-    }
+  body {
+    font-size: 8pt;
+  }
 }

@@ -17,6 +17,7 @@
   },
   "description": "Il curriculum vitae di Daniele Irsuti",
   "footer": {
-    "printerFriendly": "Questa pagina è stampabile! 🖨 "
+    "printerFriendly": "Questa pagina è stampabile! 🖨 ",
+    "print": "Stampa"
   }
 }
