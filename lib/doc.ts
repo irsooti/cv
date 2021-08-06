@@ -1,9 +1,11 @@
-import matter, { GrayMatterFile, GrayMatterOption } from 'gray-matter';
-import { join } from 'path';
-import fs from 'fs';
 import { ExperienceModel } from '@/shared/types';
+import fs from 'fs';
+import matter from 'gray-matter';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import { join } from 'path';
 
-export function getDocBySlug<T extends { [key: string]: any }>(
+export async function getDocBySlug<T extends { [key: string]: any }>(
   slug: string,
   path: string
 ) {
@@ -12,7 +14,9 @@ export function getDocBySlug<T extends { [key: string]: any }>(
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  return { slug: realSlug, meta: data as T, content };
+  const mdxSource = await serialize(content);
+
+  return { slug: realSlug, meta: data as T, content: mdxSource };
 }
 
 export function getDocs<T extends { [key: string]: any }>(path: string) {
@@ -25,7 +29,7 @@ export function sortExperienceDocsByDate(
   docs: {
     slug: string;
     meta: ExperienceModel;
-    content: string;
+    content: MDXRemoteSerializeResult<Record<string, unknown>>;
   }[]
 ) {
   const sortedContents = docs.sort((before, after) => {

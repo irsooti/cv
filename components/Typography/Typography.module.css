@@ -1,0 +1,31 @@
+.h1 {
+}
+
+.a {
+  /* display: flex; */
+  position: relative;
+  color: var(--primary)
+}
+
+.a:before {
+  content: ' ';
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border-bottom: solid 2px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.a:hover:before {
+  width: 100%;
+}
+
+.img {
+  margin: 15px 0px;
+}
+
+.img img {
+  border-radius: var(--round-lg);
+}

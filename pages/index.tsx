@@ -3,13 +3,12 @@ import Hero from '@/components/Hero';
 import Layout from '@/components/Layout/Layout';
 import Main from '@/components/Layout/Main';
 import Navbar from '@/components/Navbar';
-import PrintableMessage from '@/components/PrintableMessage';
 import { getDocs, sortExperienceDocsByDate } from '@/lib/doc';
 import { ExperienceModel } from '@/shared/types';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import dynamic from 'next/dynamic';
 
 const PrintableMessageWithNoSSR = dynamic(
   () => import('@/components/PrintableMessage'),

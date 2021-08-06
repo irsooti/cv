@@ -7,3 +7,6 @@ endDate: 7/2020
 ---
 
 I **love** using [Next.js](https://nextjs.org/)
+![as](/tet.png)
+
+> Porca miseria che frase ad effetto che devo fare? allucinante!
