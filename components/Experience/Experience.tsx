@@ -21,7 +21,10 @@ export const Experience: React.FC<Props> = ({
       <div className={classes.description}>
         <header>
           <h4 className={classes.company}>{company}</h4>
-          <time className={classes.time}>
+          <time
+            className={classes.time}
+            dateTime={endDate.split('/').reverse().join('-')}
+          >
             {startDate} - {endDate}
           </time>
         </header>
