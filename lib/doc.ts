@@ -1,7 +1,8 @@
-import matter, { GrayMatterFile, GrayMatterOption } from 'gray-matter';
-import { join } from 'path';
-import fs from 'fs';
 import { ExperienceModel } from '@/shared/types';
+import { compareAsc } from 'date-fns';
+import fs from 'fs';
+import matter from 'gray-matter';
+import { join } from 'path';
 
 export function getDocBySlug<T extends { [key: string]: any }>(
   slug: string,
@@ -29,11 +30,12 @@ export function sortExperienceDocsByDate(
   }[]
 ) {
   const sortedContents = docs.sort((before, after) => {
-    const [beforeMonth, beforeYear] = before.meta.endDate.split('/');
-    const [afterMonth, afterYear] = after.meta.endDate.split('/');
-    return (
-      new Date(Number(afterYear), Number(afterMonth), 1).getFullYear() -
-      new Date(Number(beforeYear), Number(beforeMonth), 1).getFullYear()
+    const [endBeforeMonth, endBeforeYear] = before.meta.endDate.split('/');
+    const [endAfterMonth, endAfterYear] = after.meta.endDate.split('/');
+
+    return compareAsc(
+      new Date(Number(endAfterYear), Number(endAfterMonth), 1),
+      new Date(Number(endBeforeYear), Number(endBeforeMonth), 1)
     );
   });
 
