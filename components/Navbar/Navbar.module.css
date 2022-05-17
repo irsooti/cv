@@ -20,7 +20,7 @@
   background: #fff;
   overflow: auto;
   box-shadow: 1px 0px 10px #ccc;
-
+  z-index: 1;
   position: fixed;
   bottom: 0;
   width: 100%;
