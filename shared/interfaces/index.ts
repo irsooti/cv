@@ -1,1 +1,1 @@
-export { Awaited } from './Awaited';
+export type { Awaited } from './Awaited';
