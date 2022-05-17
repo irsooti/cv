@@ -7,7 +7,6 @@
   text-transform: uppercase;
   position: relative;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-  mix-blend-mode: difference;
   box-sizing: border-box;
   border-radius: var(--round-lg);
 }
@@ -29,12 +28,9 @@
 .box:hover:after {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
   z-index: -1;
+  mix-blend-mode: difference;
   background: rgba(0, 0, 0, 0.295);
   width: 100%;
-}
-
-.box--md {
-  padding: 5px 15px;
 }
 
 .box--lg {
@@ -42,7 +38,7 @@
 }
 
 .box--md {
-  padding: 5px 15px;
+  padding: 15px 25px;
 }
 
 .box--xs {
